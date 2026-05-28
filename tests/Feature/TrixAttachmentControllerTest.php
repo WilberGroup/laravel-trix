@@ -1,19 +1,20 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Tests\Feature;
+namespace Wilber\LaravelTrix\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Te7aHoudini\LaravelTrix\Models\TrixAttachment;
-use Te7aHoudini\LaravelTrix\Tests\Models\Post;
-use Te7aHoudini\LaravelTrix\Tests\TestCase;
+use PHPUnit\Framework\Attributes\Test;
+use Wilber\LaravelTrix\Models\TrixAttachment;
+use Wilber\LaravelTrix\Tests\Models\Post;
+use Wilber\LaravelTrix\Tests\TestCase;
 
 class TrixAttachmentControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function it_can_store_attachment_request()
     {
         Storage::fake('fooDisk');
@@ -31,7 +32,7 @@ class TrixAttachmentControllerTest extends TestCase
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_destroy_attachment()
     {
         Storage::fake('fooDisk');

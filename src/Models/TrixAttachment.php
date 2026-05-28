@@ -1,6 +1,6 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Models;
+namespace Wilber\LaravelTrix\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;

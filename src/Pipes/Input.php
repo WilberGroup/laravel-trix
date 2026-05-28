@@ -1,8 +1,8 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Pipes;
+namespace Wilber\LaravelTrix\Pipes;
 
-use Te7aHoudini\LaravelTrix\LaravelTrix;
+use Wilber\LaravelTrix\LaravelTrix;
 
 class Input
 {

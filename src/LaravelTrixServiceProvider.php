@@ -1,6 +1,6 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix;
+namespace Wilber\LaravelTrix;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;

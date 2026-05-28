@@ -1,9 +1,9 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Pipes;
+namespace Wilber\LaravelTrix\Pipes;
 
 use Illuminate\Support\Arr;
-use Te7aHoudini\LaravelTrix\LaravelTrix;
+use Wilber\LaravelTrix\LaravelTrix;
 
 class Styles
 {
