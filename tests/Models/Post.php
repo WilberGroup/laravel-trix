@@ -1,9 +1,9 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Tests\Models;
+namespace Wilber\LaravelTrix\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Te7aHoudini\LaravelTrix\Traits\HasTrixRichText;
+use Wilber\LaravelTrix\Traits\HasTrixRichText;
 
 class Post extends Model
 {

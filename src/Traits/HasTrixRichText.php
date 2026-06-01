@@ -1,11 +1,11 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Traits;
+namespace Wilber\LaravelTrix\Traits;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Te7aHoudini\LaravelTrix\Models\TrixAttachment;
-use Te7aHoudini\LaravelTrix\Models\TrixRichText;
+use Wilber\LaravelTrix\Models\TrixAttachment;
+use Wilber\LaravelTrix\Models\TrixRichText;
 
 trait HasTrixRichText
 {

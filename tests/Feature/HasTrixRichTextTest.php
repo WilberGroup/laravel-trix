@@ -1,18 +1,19 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Tests\Feature;
+namespace Wilber\LaravelTrix\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Str;
-use Te7aHoudini\LaravelTrix\Models\TrixAttachment;
-use Te7aHoudini\LaravelTrix\Tests\Models\Post;
-use Te7aHoudini\LaravelTrix\Tests\TestCase;
+use PHPUnit\Framework\Attributes\Test;
+use Wilber\LaravelTrix\Models\TrixAttachment;
+use Wilber\LaravelTrix\Tests\Models\Post;
+use Wilber\LaravelTrix\Tests\TestCase;
 
 class HasTrixRichTextTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function it_can_store_rich_text()
     {
         $post = Post::create([
@@ -30,7 +31,7 @@ class HasTrixRichTextTest extends TestCase
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_can_store_attachment()
     {
         TrixAttachment::create([
@@ -59,7 +60,7 @@ class HasTrixRichTextTest extends TestCase
         $this->assertFalse((bool) TrixAttachment::first()->is_pending);
     }
 
-    /** @test */
+    #[Test]
     public function it_renders_the_content()
     {
         $post = Post::create([

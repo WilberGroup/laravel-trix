@@ -1,13 +1,13 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Http\Controllers;
+namespace Wilber\LaravelTrix\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-use Te7aHoudini\LaravelTrix\Models\TrixAttachment;
+use Wilber\LaravelTrix\Models\TrixAttachment;
 
 class TrixAttachmentController extends Controller
 {

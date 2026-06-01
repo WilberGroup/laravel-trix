@@ -1,13 +1,13 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix;
+namespace Wilber\LaravelTrix;
 
 use Illuminate\Pipeline\Pipeline;
 use Illuminate\Support\Str;
-use Te7aHoudini\LaravelTrix\Pipes\AttachmentInput;
-use Te7aHoudini\LaravelTrix\Pipes\Input;
-use Te7aHoudini\LaravelTrix\Pipes\Styles;
-use Te7aHoudini\LaravelTrix\Pipes\TrixEditor;
+use Wilber\LaravelTrix\Pipes\AttachmentInput;
+use Wilber\LaravelTrix\Pipes\Input;
+use Wilber\LaravelTrix\Pipes\Styles;
+use Wilber\LaravelTrix\Pipes\TrixEditor;
 
 class LaravelTrix
 {

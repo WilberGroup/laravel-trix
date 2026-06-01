@@ -1,18 +1,19 @@
 <?php
 
-namespace Te7aHoudini\LaravelTrix\Tests\Unit;
+namespace Wilber\LaravelTrix\Tests\Unit;
 
 use Illuminate\Support\Str;
-use Te7aHoudini\LaravelTrix\Tests\Models\Post;
-use Te7aHoudini\LaravelTrix\Tests\TestCase;
+use PHPUnit\Framework\Attributes\Test;
+use Wilber\LaravelTrix\Tests\Models\Post;
+use Wilber\LaravelTrix\Tests\TestCase;
 
 class LaravelTrixTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_returns_default_trix_html()
     {
         $expected = <<<EOT
-<span v-pre id='container-post-description-1'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='post-description-1' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-post-description-1' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='post-description-1' data-config='{"id":"post-description-1","modelClass":"Te7aHoudini\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </span>
+<span v-pre id='container-post-description-1'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='post-description-1' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-post-description-1' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='post-description-1' data-config='{"id":"post-description-1","modelClass":"Wilber\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </span>
 EOT;
 
         $this->assertEquals(
@@ -21,7 +22,7 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_hides_toolbar()
     {
         $expected = <<<'EOT'
@@ -33,7 +34,7 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_hides_tools()
     {
         $expected = <<<'EOT'
@@ -45,7 +46,7 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_hides_button_icons()
     {
         $expected = <<<'EOT'
@@ -57,11 +58,11 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_changes_id()
     {
         $expected = <<<EOT
-<span v-pre id='container-foo'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='foo' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-foo' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='foo' data-config='{"id":"foo","modelClass":"Te7aHoudini\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </span>
+<span v-pre id='container-foo'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='foo' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-foo' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='foo' data-config='{"id":"foo","modelClass":"Wilber\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </span>
 EOT;
 
         $this->assertTrue(
@@ -69,11 +70,11 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_changes_disk()
     {
         $expected = <<<EOT
-data-config='{"disk":"fooDisk","id":"post-description-1","modelClass":"Te7aHoudini\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}
+data-config='{"disk":"fooDisk","id":"post-description-1","modelClass":"Wilber\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}
 EOT;
 
         $this->assertTrue(
@@ -81,11 +82,11 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_change_container_element()
     {
         $expected = <<<EOT
-<fooElement v-pre id='container-post-description-1'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='post-description-1' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-post-description-1' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='post-description-1' data-config='{"containerElement":"fooElement","id":"post-description-1","modelClass":"Te7aHoudini\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </fooElement>
+<fooElement v-pre id='container-post-description-1'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='post-description-1' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-post-description-1' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='post-description-1' data-config='{"containerElement":"fooElement","id":"post-description-1","modelClass":"Wilber\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </fooElement>
 EOT;
 
         $this->assertTrue(
@@ -93,11 +94,11 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_renders_correct_id_for_new_model()
     {
         $expected = <<<EOT
-<span v-pre id='container-post-description-new-model'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='post-description-new-model' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-post-description-new-model' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='post-description-new-model' data-config='{"id":"post-description-new-model","modelClass":"Te7aHoudini\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </span>
+<span v-pre id='container-post-description-new-model'> <laravel-trix-instance-style style='display:none;'>  </laravel-trix-instance-style><input id='post-description-new-model' value='' name='post-trixFields[description]' type='hidden'><input id='attachment-post-description-new-model' value='[]' name='attachment-post-trixFields[description]' type='hidden'><trix-editor class='trix-content' input='post-description-new-model' data-config='{"id":"post-description-new-model","modelClass":"Wilber\\\LaravelTrix\\\Tests\\\Models\\\Post","field":"description"}'></trix-editor> </span>
 EOT;
 
         $this->assertTrue(
@@ -105,7 +106,7 @@ EOT;
         );
     }
 
-    /** @test */
+    #[Test]
     public function it_returns_new_model_using_app_make()
     {
         $expected = <<<'EOT'
